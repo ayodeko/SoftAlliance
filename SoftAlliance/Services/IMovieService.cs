@@ -1,6 +1,12 @@
-﻿namespace SoftAlliance.Services;
+﻿using SoftAlliance.Entities;
 
-public interface MovieService
+namespace SoftAlliance.Services;
+
+public interface IMovieService
 {
-    void AddService()
+    Response AddMovie(Movie movie);
+    Response UpdateMovie(Movie movie);
+    Response GetAllMovies();
+    Response GetMovieById(string id);
+    Response DeleteMovie(string movieId);
 }
